@@ -24,7 +24,6 @@ Instructions
 Heat 1 tablespoon sesame oil in a large nonstick skillet over medium heat. Add mushrooms; sauté until softened and yummy. Add garlic for the last minute or two of sautéing. 
 Add the frozen wontons, chicken broth, and teriyaki sauce. Simmer for 5 minutes, with a lid on, until the wontons are heated through.
 Finish with remaining 2 tablespoons sesame oil, chili crisp, and top with sesame seeds and scallions. ''';
-const imageUrl = 'https://pinchofyum.com/cdn-cgi/image/width=680,height=99999,fit=scale-down/wp-content/uploads/Chicken-Wontons-1.jpg';
 
 void main() {
   runApp(MaterialApp(
@@ -38,15 +37,57 @@ void main() {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.network(
-              imageUrl,
-              width: double.infinity,
-              height: 250.0,
-              fit: BoxFit.cover,
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset(
+                      'assets/images/img.jpg',
+                      width: 400.0,
+                      height: 200.0,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset(
+                      'assets/images/img2.jpg',
+                      width: 400.0,
+                      height: 200.0,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset(
+                      'assets/images/img3.jpg',
+                      width: 400.0,
+                      height: 200.0,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset(
+                      'assets/images/img4.jpg',
+                      width: 400.0,
+                      height: 200.0,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ],
+              ),
             ),
-            Text('Chicken Wontons', style: TextStyle(fontSize: 28.0,color: Colors.black87),),
-            Text('Spicy Chili Sauce', style: TextStyle(fontSize: 18.0,color: Colors.grey),),
-            
+            Text(
+              'Chicken Wontons',
+              style: TextStyle(fontSize: 28.0, color: Colors.black87),
+            ),
+            Text(
+              'Spicy Chili Sauce',
+              style: TextStyle(fontSize: 18.0, color: Colors.grey),
+            ),
             Padding(
               padding: const EdgeInsets.all(28.0),
               child: Row(
@@ -54,35 +95,66 @@ void main() {
                 children: [
                   Column(
                     children: [
-                      Icon(Icons.favorite, color: Colors.deepPurpleAccent,size: 22.0,),
-                      SizedBox(height: 10.0,),
-                      Text('Favorite', style: TextStyle(color: Colors.deepPurpleAccent),)
+                      Icon(
+                        Icons.favorite,
+                        color: Colors.deepPurpleAccent,
+                        size: 22.0,
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Text(
+                        'Favorite',
+                        style: TextStyle(color: Colors.deepPurpleAccent),
+                      )
                     ],
                   ),
                   Column(
                     children: [
-                      Icon(Icons.comment, color: Colors.deepPurpleAccent,size: 22.0,),
-                      SizedBox(height: 10.0,),
-                      Text('COMMENT', style: TextStyle(color: Colors.deepPurpleAccent),)
+                      Icon(
+                        Icons.comment,
+                        color: Colors.deepPurpleAccent,
+                        size: 22.0,
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Text(
+                        'COMMENT',
+                        style: TextStyle(color: Colors.deepPurpleAccent),
+                      )
                     ],
                   ),
                   Column(
                     children: [
-                      Icon(Icons.share, color: Colors.deepPurpleAccent,size: 22.0,),
-                      SizedBox(height: 10.0,),
-                      Text('SHARE', style: TextStyle(color: Colors.deepPurpleAccent),)
+                      Icon(
+                        Icons.share,
+                        color: Colors.deepPurpleAccent,
+                        size: 22.0,
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Text(
+                        'SHARE',
+                        style: TextStyle(color: Colors.deepPurpleAccent),
+                      )
                     ],
                   )
                 ],
               ),
             ),
-            Text('RECIPE',style: TextStyle(fontSize: 30.0, backgroundColor: Colors.grey),),
-            
+            Text(
+              'RECIPE',
+              style: TextStyle(fontSize: 30.0, backgroundColor: Colors.grey),
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: Text(recipy, style: TextStyle(fontSize: 18.0),),
+              child: Text(
+                recipy,
+                style: TextStyle(fontSize: 18.0),
+              ),
             )
-        
           ],
         ),
       ),
